@@ -848,6 +848,7 @@ def init_time(reinitialize=False):
         # by hubble() ourselves.
         a_values = t_values = H_values = None
         a_today = 1
+
         if enable_class_background:
             # Ideally we would call CLASS via compute_cosmo() from the
             # linear module, as this would preserve all results for any
@@ -858,11 +859,28 @@ def init_time(reinitialize=False):
             # commons module.
             # Note that only the master have access to the results
             # from the CLASS computation.
-            cosmo = call_class(class_call_reason='in order to set the cosmic clock')
-            background = cosmo.get_background()
-            a_values = 1/(background['z'] + 1)
-            t_values = background['proper time [Gyr]']*units.Gyr
-            H_values = background['H [1/Mpc]']*(light_speed/units.Mpc)
+
+            if CosmoFile == '':
+                cosmo = call_class(class_call_reason='in order to set the cosmic clock')
+                background = cosmo.get_background()
+                a_values = 1/(background['z'] + 1)
+                t_values = background['proper time [Gyr]']*units.Gyr
+                H_values = background['H [1/Mpc]']*(light_speed/units.Mpc)
+
+            else:
+                masterprint('Replacing class with my result')
+
+                # This is my call
+                import h5py
+                cosmo_archive = h5py.File(CosmoFile, 'r')
+                background = cosmo_archive['background']
+
+                a_values = asarray(background['a'])
+                t_values = asarray(background['proper time [Gyr]'])*units.Gyr
+                H_values = asarray(background['H [1__per__Mpc]'])*(light_speed/units.Mpc)
+
+                masterprint('Time initialized from cosmo background')
+
         elif master:
             masterprint('Solving matter + Λ background ...')
             # Get the age of the universe t(a=1)

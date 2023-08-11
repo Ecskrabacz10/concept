@@ -2535,6 +2535,7 @@ cython.declare(
     particle_reordering=object,
     enable_Hubble='bint',
     enable_class_background='bint',
+    CosmoFile=str,
     # Hidden parameters
     special_params=dict,
 )
@@ -2946,6 +2947,9 @@ class_extra_perturbations = set(
     str(el) for el in any2list(user_params.get('class_extra_perturbations', [])) if el
 )
 user_params['class_extra_perturbations'] = class_extra_perturbations
+
+CosmoFile = str(user_params.get('CosmoFile', ''))
+
 # Numerical parameters
 boxsize = float(user_params.get('boxsize', 512*units.Mpc))
 user_params['boxsize'] = boxsize
