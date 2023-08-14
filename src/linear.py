@@ -126,6 +126,10 @@ class CosmoResults:
         If a filename is passed, CLASS data will be read from this file.
         Nothing will however be saved to this file.
         """
+
+        filename=CosmoFile
+
+
         # Only part of the computed CLASS data is needed.
         # Below, the keys corresponding to the needed fields of CLASS
         # data is written as regular expressions.
@@ -1212,6 +1216,7 @@ class CosmoResults:
             for key, val in hdf5_file['params'].attrs.items():
                 key = key.replace('__per__', '/')
                 if val != self.params.get(key):
+                    masterprint('Weirdness at:', key, val)
                     abort(f'The CLASS dump {self.filename} contain unexpected parameter values')
             # Save the passed element
             if element in self.attribute_names:
@@ -1289,6 +1294,7 @@ class CosmoResults:
                 for key, val in hdf5_file['params'].attrs.items():
                     key = key.replace('__per__', '/')
                     if val != self.params.get(key):
+                        masterprint('Weirdness at:', key, val)
                         abort(f'The CLASS dump {self.filename} contains'
                               ' unexpected parameter values')
             # Load the passed element
