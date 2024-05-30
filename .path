@@ -6,80 +6,80 @@
 # CO𝘕CEPT directories #
 #######################
 # Top-level directory of the CO𝘕CEPT installation
-concept_dir='/home/jeppe/concept'
+concept_dir='/u/jwfoster/concept'
 # Default build directory
-build_dir='/home/jeppe/concept/build'
+build_dir='/u/jwfoster/concept/build'
 # Directory containing installed dependency programs
-dep_dir='/home/jeppe/concept/dep'
+dep_dir='/u/jwfoster/concept/dep'
 # Directory containing documentation
-doc_dir='/home/jeppe/concept/doc'
+doc_dir='/u/jwfoster/concept/doc'
 # Directory intended for initial conditions
-ic_dir='/home/jeppe/concept/ic'
+ic_dir='/u/jwfoster/concept/ic'
 # Directory containing information for each job
-job_dir='/home/jeppe/concept/job'
+job_dir='/u/jwfoster/concept/job'
 # Directory intended for output
-output_dir='/home/jeppe/concept/output'
+output_dir='/u/jwfoster/concept/output'
 # Directory intended for parameter files
-param_dir='/home/jeppe/concept/param'
+param_dir='/u/jwfoster/concept/param'
 # Directory containing reusable dumps
-reusable_dir='/home/jeppe/concept/.reusable'
+reusable_dir='/u/jwfoster/concept/.reusable'
 # Directory containing source code
-src_dir='/home/jeppe/concept/src'
+src_dir='/u/jwfoster/concept/src'
 # Directory containing tests
-test_dir='/home/jeppe/concept/test'
+test_dir='/u/jwfoster/concept/test'
 # Directory used for temporary files
-tmp_dir='/home/jeppe/concept/.tmp'
+tmp_dir='/u/jwfoster/concept/.tmp'
 # Directory containing utilities
-util_dir='/home/jeppe/concept/util'
+util_dir='/u/jwfoster/concept/util'
 
 
 ##########################
 # Dependency directories #
 ##########################
 # Directory of BLAS
-blas_dir='/home/jeppe/concept/dep/openblas'
+blas_dir='/u/jwfoster/concept/dep/openblas'
 # Directory of CLASS
-class_dir='/home/jeppe/concept/dep/class'
+class_dir='/u/jwfoster/concept/dep/class'
 # Directory of FFTW
-fftw_dir='/home/jeppe/concept/dep/fftw'
+fftw_dir='/sw/spack/deltas11-2023-03/apps/linux-rhel8-zen3/gcc-11.4.0/fftw-3.3.10-ifzwyyh'
 # Directory of FFTW2, used by GADGET
-fftw_for_gadget_dir='/home/jeppe/concept/dep/gadget/fftw'
+fftw_for_gadget_dir='/u/jwfoster/concept/dep/gadget/fftw'
 # Directory of GADGET2
-gadget_dir='/home/jeppe/concept/dep/gadget'
+gadget_dir='/u/jwfoster/concept/dep/gadget'
 # Directory containing the GADGET2 source code
-Gadget2_dir='/home/jeppe/concept/dep/gadget/Gadget2'
+Gadget2_dir='/u/jwfoster/concept/dep/gadget/Gadget2'
 # Directory of GSL
-gsl_dir='/home/jeppe/concept/dep/gsl'
+gsl_dir='/sw/spack/deltas11-2023-03/apps/linux-rhel8-zen3/gcc-11.4.0/gsl-2.7.1-ytg74v2'
 # Directory of HDF5
-hdf5_dir='/home/jeppe/concept/dep/hdf5'
+hdf5_dir='/u/jwfoster/concept/dep/hdf5'
 # Directories of MPI
-mpi_dir='/home/jeppe/concept/dep/mpich'
-mpi_compilerdir='/home/jeppe/concept/dep/mpich/bin'
-mpi_bindir='/home/jeppe/concept/dep/mpich/bin'
-mpi_libdir='/home/jeppe/concept/dep/mpich/lib'
-mpi_includedir='/home/jeppe/concept/dep/mpich/include'
-mpi_symlinkdir='/home/jeppe/concept/dep/.mpi_symlinks'
+mpi_dir='/sw/spack/deltas11-2023-03/apps/linux-rhel8-zen3/gcc-11.4.0/openmpi-4.1.6-lranp74'
+mpi_compilerdir='/sw/spack/deltas11-2023-03/apps/linux-rhel8-zen3/gcc-11.4.0/openmpi-4.1.6-lranp74/bin'
+mpi_bindir='/sw/spack/deltas11-2023-03/apps/linux-rhel8-zen3/gcc-11.4.0/openmpi-4.1.6-lranp74/bin'
+mpi_libdir='/u/jwfoster/concept/dep/.mpi_symlinks/merged_lib_specified'
+mpi_includedir='/sw/spack/deltas11-2023-03/apps/linux-rhel8-zen3/gcc-11.4.0/openmpi-4.1.6-lranp74/include'
+mpi_symlinkdir='/u/jwfoster/concept/dep/.mpi_symlinks'
 # Directory of Python
-python_dir='/home/jeppe/concept/dep/python'
+python_dir='/u/jwfoster/miniconda3/envs/concept'
 # Directory of zlib
-zlib_dir='/home/jeppe/concept/dep/zlib'
+zlib_dir='/u/jwfoster/concept/dep/zlib'
 
 
 #########
 # Files #
 #########
 # The executable script of the CO𝘕CEPT code
-concept='/home/jeppe/concept/concept'
+concept='/u/jwfoster/concept/concept'
 # The file containing environment variables
-env='/home/jeppe/concept/.env'
+env='/u/jwfoster/concept/.env'
 # The install script
-install='/home/jeppe/concept/install'
+install='/u/jwfoster/concept/install'
 # The MPI C compiler
-mpicc='/home/jeppe/concept/dep/mpich/bin/mpicc'
+mpicc='/sw/spack/deltas11-2023-03/apps/linux-rhel8-zen3/gcc-11.4.0/openmpi-4.1.6-lranp74/bin/mpicc'
 # The MPI executable
-mpiexec='/home/jeppe/concept/dep/mpich/bin/mpiexec'
+mpiexec='/sw/spack/deltas11-2023-03/apps/linux-rhel8-zen3/gcc-11.4.0/openmpi-4.1.6-lranp74/bin/mpiexec'
 # The file containing paths (this file)
-path='/home/jeppe/concept/.path'
+path='/u/jwfoster/concept/.path'
 # The Python interpreter
-python='/home/jeppe/concept/dep/python/bin/python3.11'
+python='/u/jwfoster/miniconda3/envs/concept/bin/python3.11'
 
